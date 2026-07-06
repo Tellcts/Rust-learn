@@ -1,0 +1,18 @@
+[package]
+name = "leetcode"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+readme = "README.md"
+authors = ["Tzcan <tzcan@foxmail.com>"]
+repository = "https://github.com/Tellcts/Rust-learn.git"
+description = "Record the experience of doing LeetCode practice questions"
+
+
+[lib]
+name = "leetcode"
+path = "src/lib.rs"
+crate-type = ["rlib"]
+
+
+[dependencies]
