@@ -29,9 +29,9 @@ impl Solution {
             }
 
             // Optimization Point
-            if (nums[first] as i64 
-                + nums[n - 3] as i64 
-                + nums[n - 2] as i64 
+            if (nums[first] as i64
+                + nums[n - 3] as i64
+                + nums[n - 2] as i64
                 + nums[n - 1] as i64)
                 < target
             {
@@ -75,7 +75,8 @@ impl Solution {
                         forth -= 1;
                     } else if sum < target {
                         third += 1;
-                    } else {    // sum == target
+                    } else {
+                        // sum == target
                         ans.push(vec![nums[first], nums[second], nums[third], nums[forth]]);
 
                         third += 1;
@@ -99,7 +100,7 @@ impl Solution {
 }
 
 #[cfg(test)]
-mod tests{
+mod tests {
     use super::*;
     use crate::test;
 
@@ -112,5 +113,3 @@ mod tests{
         }
     );
 }
-
-
