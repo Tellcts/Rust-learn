@@ -27,8 +27,8 @@ mod tests {
         test_remove_duplicates{
             Solution::remove_duplicates;
 
-           &mut vec![1,1,2] => 2;
-           &mut vec![0,0,1,1,1,2,2,3,3,4] => 5;
+           &mut [1,1,2] => 2;
+           &mut [0,0,1,1,1,2,2,3,3,4] => 5;
         }
     );
 }

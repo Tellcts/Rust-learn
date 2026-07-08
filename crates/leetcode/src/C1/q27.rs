@@ -28,8 +28,8 @@ mod tests {
         test_remove_element{
             Solution::remove_element;
 
-            &mut vec![3,2,2,3], 3 => 2;
-            &mut vec![0,1,2,2,3,0,4,2], 2 => 5;
+            &mut [3,2,2,3], 3 => 2;
+            &mut [0,1,2,2,3,0,4,2], 2 => 5;
         }
     );
 }
