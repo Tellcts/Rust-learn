@@ -22,6 +22,8 @@ pub mod q28;
 pub mod q29;
 pub mod q3;
 pub mod q30;
+pub mod q31;
+pub mod q32;
 pub mod q4;
 pub mod q41;
 pub mod q42;
