@@ -8,13 +8,11 @@ authors = ["Tzcan <tzcan@foxmail.com>"]
 repository = "https://github.com/Tellcts/DataStructure.git"
 description = "Implements almost useful data structures on Rust."
 
+
 [lib]
 name = "ds"
 path = "src/lib.rs"
 
-[[bin]]
-name = "ds-main"
-path = "src/main.rs"
 
 [dependencies]
 rand = "0.10.1"
