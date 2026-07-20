@@ -1,15 +1,16 @@
 #[macro_export]
-macro_rules! test {
+#[doc(hidden)]
+macro_rules! __test_impl {
     // 同时测试多个没有输入参数的功能函数
     (
-        $name:ident{
-        $($func:path => $expected:expr);* $(;)?
+        $name:ident {
+        $($func:path => $expected:expr);+ $(;)?
     }) => {
         #[test]
         fn $name() {
             $(
                 assert_eq!($func(), $expected);
-            )*
+            )+
         }
     };
 
@@ -29,7 +30,7 @@ macro_rules! test {
 
     // 同时测试两个功能函数
     (
-        $name:ident{
+        $name:ident {
         $func1:path;
         $func2:path;
         $($($input:expr),+ => $expected:expr);+ $(;)?
@@ -45,7 +46,7 @@ macro_rules! test {
 
     // 同时测试三个功能函数
     (
-        $name:ident{
+        $name:ident {
         $func1:path;
         $func2:path;
         $func3:path;
@@ -60,4 +61,23 @@ macro_rules! test {
             )+
         }
     }
+}
+
+#[macro_export]
+macro_rules! test {
+    (
+        $(
+            $name:ident {
+                $($inner:tt)+
+            }
+        );+ $(;)?
+    ) => {
+        $(
+            $crate::__test_impl! {
+                $name {
+                    $($inner)+
+                }
+            }
+        )+
+    };
 }
