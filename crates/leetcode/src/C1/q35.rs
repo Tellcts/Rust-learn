@@ -1,5 +1,6 @@
 //! 搜索插入位置
 
+/// [灵茶山艾府](https://leetcode.cn/problems/search-insert-position/solutions/2023391/er-fen-cha-zhao-zong-shi-xie-bu-dui-yi-g-nq23/)
 pub struct Solution;
 
 impl Solution {
