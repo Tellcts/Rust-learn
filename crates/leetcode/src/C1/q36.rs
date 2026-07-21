@@ -5,9 +5,9 @@ pub struct Solution;
 
 impl Solution {
     pub fn is_valid_sudoku(board: &[Vec<u8>]) -> bool {
-        let mut row_has = vec![[false; 9]; 9];
-        let mut col_has = vec![[false; 9]; 9];
-        let mut sub_has = vec![[[false; 9]; 3]; 3];
+        let mut row_has = [[false; 9]; 9];
+        let mut col_has = [[false; 9]; 9];
+        let mut sub_has = [[[false; 9]; 3]; 3];
 
         for (i, row) in board.iter().enumerate() {
             for (j, &b) in row.iter().enumerate() {
